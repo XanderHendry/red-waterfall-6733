@@ -1,0 +1,19 @@
+<%= "Population: #{@population}" %>
+<section id='first_25'>
+  <% @characters.each do |character| %>
+
+    <%= "Name: #{character.name}" %>
+    <p>Allies: 
+      <% character.allies.each do |ally| %>
+      <%= "#{ally} " %>
+      <% end %>
+    </p>
+    <p>Enemies: 
+      <% character.enemies.each do |enemy| %>
+      <%= "#{enemy} " %>
+      <% end %>
+    </p>
+    <p><%= "Affiliations: #{character.affiliation}" %></p>
+  <% end %>
+</section>
+
