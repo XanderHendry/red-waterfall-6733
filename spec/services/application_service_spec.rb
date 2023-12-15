@@ -10,9 +10,8 @@ RSpec.describe ApplicationService do
   context "#get_url" do
       it "returns parsed JSON data" do 
         parsed_response = ApplicationService.new.get_url("/api/v1/characters")
-        binding.pry
-        expect(parsed_response).to be_a Hash
-        expect(parsed_response[:results]).to be_an(Array)
+        expect(parsed_response).to be_an Array
+        expect(parsed_response.first).to be_a Hash
       end
     end
 end 
